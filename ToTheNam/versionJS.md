@@ -52,4 +52,4 @@ Phiên bản 5.1 này của ECMAScript chỉ thay đổi biên tập đẻ phù 
   Phiên bản thứ 10, chính  thức được biết đến với tên gọi ECMAScript 2019, phát hành vào tháng 6/2019. Các tính năng được bổ sung bao gồm:
     Thêm Array.prototype.flat
     Thêm Array.prototype.flatMap
-    Thay đổi Array.sort và Object.fromEntries.
+    Thay đổi Array.sort và Object.fromEntries..
