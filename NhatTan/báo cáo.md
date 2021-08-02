@@ -74,3 +74,6 @@ Phiên bản thứ 10, chính  thức được biết đến với tên gọi EC
 Thêm Array.prototype.flat
 Thêm Array.prototype.flatMap
 Thay đổi Array.sort và Object.fromEntries
+
+
+Update 1
