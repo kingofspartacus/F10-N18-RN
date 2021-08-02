@@ -19,3 +19,5 @@
 - Phiên bản thứ 8 được phát hành vào năm 2017 bổ sung các tính năng:
     + Thêm Async functions
 - Phiên bản thứ 9 được phát hành vào năm 2018
+
+test123
