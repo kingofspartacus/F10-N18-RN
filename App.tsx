@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { View, Text } from 'react-native'
-
-export default function App() {
-  return (
-    <View>
-      <Text>nam</Text>
-    </View>
-  )
+import AppStack from './src/navigation/AppStack'
+export default class App extends Component {
+  render() {
+    return (
+      <AppStack />
+    )
+  }
 }
+
