@@ -119,8 +119,13 @@ const homeMain = ({ }) => {
   )
 };
 const styles = StyleSheet.create({
-  content: { height: '100%' },
-  header: { height: 50, flexDirection: 'row' },
+  content: {
+    height: '100%'
+  },
+  header: {
+    height: 50,
+    flexDirection: 'row'
+  },
   Seach_title: {
     flexDirection: 'row',
     height: 55,
