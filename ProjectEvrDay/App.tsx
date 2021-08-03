@@ -1,11 +1,10 @@
 import React from 'react'
 import { View, Text } from 'react-native'
-
-const App = () => {
+import Home from './screen/Home'
+import Navigation from './Navigation/Navigation'
+const App:Function = () => {
   return (
-    <View>
-      <Text>đá</Text>
-    </View>
+      <Navigation/>
   )
 }
 
