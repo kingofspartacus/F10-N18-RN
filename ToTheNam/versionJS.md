@@ -53,4 +53,3 @@ Phiên bản 5.1 này của ECMAScript chỉ thay đổi biên tập đẻ phù 
     Thêm Array.prototype.flat
     Thêm Array.prototype.flatMap
     Thay đổi Array.sort và Object.fromEntries...
-vlxx
