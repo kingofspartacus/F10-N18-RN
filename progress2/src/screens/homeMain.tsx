@@ -65,6 +65,7 @@ const homeMain = ({ }) => {
           }}
           keyExtractor={item => item.categoryId?.toString()}
         />
+        <homeFlFooter />
         <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
           <Text style={[{ fontSize: 30, marginBottom: 8, fontWeight: 'bold' }]}>Shop the 'Gram</Text>
           <Text style={[{ fontSize: 15 }]}>Upload your favorite SB outfit on Instagram with</Text>
