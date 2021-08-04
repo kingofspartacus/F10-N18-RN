@@ -1,9 +1,9 @@
-import React, {useState, FC} from 'react';
+import React, {useState, FC, PropsWithChildren} from 'react';
 import { Text, View, TextInput } from 'react-native';
 import styles from "./styles";
 import color from "../../../assets/theme/colors";
 
-interface InputProps{
+interface InputProps extends PropsWithChildren<any>{
     style?: any;
     onChangeText: any;
     value?: any;
@@ -44,16 +44,18 @@ const Input: FC<InputProps> = ({style, onChangeText, value, label, icon, iconPos
             <View style={[styles.wrapper, {alignItems: icon ? 'center': 'baseline'},
                 {borderColor: getBorderColor() ,flexDirection: getFlexDirection()}]}>
                 <View>{icon && icon}</View>
-                <TextInput style={[styles.textInput, style]}
-                           onChangeText={onChangeText}
-                           value={value}
-                           onFocus={() => {
-                               setFocused(true)
-                           }}
-                           onBlur={() => {
-                               setFocused(false)
-                           }}
-                           {...props}
+                <TextInput 
+                    style={[styles.textInput, style]}
+                    placeholderTextColor = {color.grey}
+                    onChangeText={onChangeText}
+                    value={value}
+                    onFocus={() => {
+                        setFocused(true)
+                    }}
+                    onBlur={() => {
+                       setFocused(false)
+                    }}
+                    {...props}
                 />
             </View>
             {error && <Text style={styles.error}>{error}</Text>}

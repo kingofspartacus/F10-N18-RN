@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react';
-// import RegisterComponent from "../../components/Register";
+import RegisterComponent from "../../components/Register";
 import { Text, View, TextInput } from 'react-native';
 
 interface data{
@@ -22,7 +22,7 @@ const Register = () => {
 
         if(data.value !== ''){
             if(data.name === 'password'){
-                if(data.value.length < 9){
+                if(data.value.length < 8){
                     setErrors((prev) => {
                         return {...prev, [data.name]: 'Mật khẩu phải có ít nhất 8 ký tự!'}
                     })
@@ -60,13 +60,12 @@ const Register = () => {
     }
 
     return (
-        // <RegisterComponent
-        //     onSubmit={onSubmit}
-        //     onChange={onChange}
-        //     form={form}
-        //     errors={errors}
-        // />
-        <View><Text>Nothing</Text></View>
+        <RegisterComponent
+            onSubmit={onSubmit}
+            onChange={onChange}
+            errors={errors}
+        />
+        // <View><Text>Nothing</Text></View>
     );
 }
 

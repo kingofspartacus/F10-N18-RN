@@ -16,7 +16,6 @@ export interface formLogin{
 const Login = () => {
 
     const [form, setForm] = useState<formLogin>({})
-    const {navigate} = useNavigation()
 
     const onSubmit = () => {
         if(form.phone_number && form.password){
