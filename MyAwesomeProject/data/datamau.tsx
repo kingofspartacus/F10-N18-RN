@@ -1,20 +1,19 @@
 const DATA = [
     {
       id: 1,
-      photo: require('../image/mau1.jpg'),
+      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHxkhpLKZfbnhHy_3ebYQtabf1GKLndhMNdQ&usqp=CAU'
     },
     {
       id: 2,
-      photo: require('../image/mau2.jpg'),
+      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv6uQ9vC8q8ML2CBbHho11My8tOk921Ep-4Q&usqp=CAU'
     },
-  {
+    {
       id: 3,
-      photo: require('../image/mau3.jpg'),
-      
-  },
-  {
+      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX7CcFgsY-KteCERBrfuGeJBUR_pjfrQ2dvA&usqp=CAU'
+    },
+    {
       id: 4,
-      photo: require('../image/mau4.jpg'),
-  }, 
+      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFCShQIkkFjMD4C53n8xfI1HzUgcwwufl9Hw&usqp=CAU'
+    },
   ]
-  module.exports = DATA;
+export default DATA

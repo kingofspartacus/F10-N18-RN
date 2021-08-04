@@ -1,36 +1,23 @@
-const DATABANNER = [
+const Banner = [
     {
       id: 1,
-      photo: require('../image/banner1.jpg'),
+      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj5ePfd3SvB-6lPuDpxpDQSOgmaP819SnE_A&usqp=CAU'
     },
     {
       id: 2,
-      photo: require('../image/banner2.jpg'),
+      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8TXtnq1HQaa-H6Wj4-VAm9CY-FYWV9gnK4Q&usqp=CAU'
     },
-  {
+    {
       id: 3,
-      photo: require('../image/banner3.jpg'),
-      
-  },
-  {
+      url: 'https://celiavn.com/upload/files/banner-thoi-trang-nu.jpg'
+    },
+    {
       id: 4,
-      photo: require('../image/banner4.jpg'),
-  }, 
-  {
+      url: 'https://thoitrangcongsodep.net/wp-content/uploads/2020/01/t5wU7y.png'
+    },
+    {
       id: 5,
-      photo: require('../image/banner5.jpg'),
-  },
-  {
-      id: 6,
-      photo: require('../image/banner6.jpg'),
-  },
-  {
-      id: 7,
-      photo: require('../image/banner7.jpg'),
-  },
-  {
-      id: 8,
-      photo: require('../image/banner8.jpg'),
-  },
+      url: 'https://adaman.vn/ximages/1920x700x80/c4902852762e476984f3447312a74dd1.webp'
+    },
   ]
-  module.exports=DATABANNER;
+  export default Banner

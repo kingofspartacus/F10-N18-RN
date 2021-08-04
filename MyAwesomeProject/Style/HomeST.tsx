@@ -1,12 +1,130 @@
 import { StyleSheet } from "react-native";
 const styles = StyleSheet.create(
-{
-    screen:{
-        height:'100%',
-        backgroundColor:'blue',
-    },
-    header:{
-        height:'50',
-        backgroundColor:'red'
-    }
-})
+    {
+        screen:{
+            height:'100%',
+            backgroundColor:'#f0f0f0'
+            
+        },
+        title:{
+            height:50,
+            flexDirection:'row',
+            justifyContent:'space-between' ,
+            alignItems:'center',
+            borderBottomWidth:0.3,
+            borderBottomColor:'silver',
+            backgroundColor:'white'
+        },
+        tit:{
+            fontSize:25,
+            fontWeight:'bold',
+        },
+        line:{
+            width:30,
+            height:30,
+        },
+        searchbar:{
+            height:50,
+            backgroundColor:'#f5f5f5',
+            flexDirection:'row',
+            justifyContent:'space-evenly',
+            alignItems:'center',
+            
+        },
+        IPsearch:{
+            width:220,
+            height:50,
+        },
+        offer:{
+            width:'100%',
+            height:40,
+        },
+        btnoffer:{
+            backgroundColor:'white',
+            justifyContent:'center',
+            alignItems:'center',
+            height:41
+        },
+        txtoffer:{
+            color:'#969696',
+            textDecorationLine:'underline',
+        },
+        brand:{
+            width:'100%',
+            height:120,
+            justifyContent:'center',
+            alignItems:'center',
+        },
+        txtbrand:{
+            fontSize:30,
+            fontWeight:'bold',
+        },
+
+        txtdescriptsion:{
+            fontSize:15,
+        },
+        name:{
+            justifyContent:'center',
+            alignItems:'center',
+            flexDirection:'row',
+            width:'100%',
+            height:40,
+        },
+        txtname:{
+            fontSize:20,
+            fontWeight:'bold',
+        },
+        selection:{
+            flexDirection:'row',
+            width:'100%',
+            flexWrap:'wrap-reverse',
+            justifyContent:'space-evenly',
+            alignItems:'stretch',
+        },
+        imgS:{
+            width:175,
+            height:175,
+        },
+        more:{
+            width:90,
+            height:40,
+            backgroundColor:'#eaeaea',
+            alignSelf:'center',
+            alignItems:'center',
+            justifyContent:'center',
+        },
+        txtmore:{
+            fontWeight:'bold',
+        },
+        imgB:{
+            width:'100%',
+            height:230,
+        },
+        imgF:{
+            width:130,
+            height:200,
+            justifyContent:'space-evenly',
+        },
+        recently:{
+            flexDirection:'row',
+            justifyContent:'space-between',
+            height:50,
+            alignItems:'center',
+            margin:10
+        } ,
+        txtrecently:{
+            fontSize:15,
+            fontWeight:'bold',
+            
+        },
+        btnclear:{
+            width:60,
+            height:30,
+            justifyContent:'center',
+            alignItems:'center',
+            backgroundColor:'#f5f5f5',
+        },
+        
+        
+    })
+export default styles
