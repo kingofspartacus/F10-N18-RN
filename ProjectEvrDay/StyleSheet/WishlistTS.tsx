@@ -1,0 +1,51 @@
+import { StyleSheet } from "react-native";
+const styles = StyleSheet.create({
+    header:{
+        flexDirection:'row',
+        justifyContent:'flex-start',
+        height:50,
+        alignItems:'center',
+        borderBottomColor:'silver',
+        borderBottomWidth:0.5,
+        backgroundColor:'#fff'
+    },
+    Title:{
+        fontSize:18,
+        fontWeight:'bold',
+        marginLeft:10
+    },
+    numb:{
+        flexDirection:'row',
+        justifyContent:'center',
+        height:50,
+        alignItems:'center',
+        borderBottomColor:'silver',
+        borderBottomWidth:0.5,
+        backgroundColor:'#ddd'
+    },
+    numberT:{
+        fontSize:18,
+        fontWeight:'bold',
+        color:'grey'
+    },
+    img:{
+        width:120,
+        height:180,
+    },
+    fList:{
+        backgroundColor:'white',
+        height:'auto'
+    },
+    ren:{
+        flexDirection:'row',
+        width:'100%',
+        height:200,
+        alignItems:'center',
+        justifyContent:'space-evenly'
+    },
+    body:{
+        width:'55%',
+        height:'90%'
+    },
+})
+export default styles

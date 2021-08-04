@@ -2,44 +2,12 @@ import React, { useState } from 'react'
 import { Text, Image, FlatList, View, TouchableOpacity, TextInput } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import styles from '../StyleSheet/HomeTS'
+import DATA1 from '../FakeData/HomeDT2'
+import DATA from '../FakeData/DATA'
+import {useNavigation} from '@react-navigation/native';
 
-const DATA = [
-    {
-        id: 1,
-        img: 'https://www.isic.nl/media/1094811/0716_isic_nlbanner_nl.jpg?width=848&height=477&mode=crop&scale=both'
-    },
-    {
-        id: 2,
-        img: 'https://i.pinimg.com/originals/88/c7/62/88c762532584f3bb1a0b199436128526.jpg'
-    },
-    {
-        id: 3,
-        img: 'https://i.pinimg.com/originals/36/f4/ca/36f4ca067565b67442c89ec7e514bdad.jpg'
-    },
-    {
-        id: 4,
-        img: 'https://1.bp.blogspot.com/-vFKIjKrdTg8/Xwg7iC5tD4I/AAAAAAAAR1k/YYvEqQ8fJmYwwsA6e3hZTHrTcSKOc7L8ACLcBGAsYHQ/s1600/forever%2B21%2Bshopee%2Bbanner.jpg'
-    }
-];
-const DATA1 = [
-    {
-        id: 1,
-        img: 'https://www.elle.vn/wp-content/uploads/2013/05/31/forever-21.jpg'
-    },
-    {
-        id: 2,
-        img: 'https://cf.shopee.vn/file/6cb78c53c23f534e4e06c3da3cc5e865'
-    },
-    {
-        id: 3,
-        img: 'https://pbs.twimg.com/media/B0vTD1DCYAAbKIH.jpg'
-    },
-    {
-        id: 4,
-        img: 'http://i.imgur.com/AEseFEy.jpg'
-    }
-];
 const Home = () => {
+    const navigation = useNavigation();
     const [search, setSearch] = useState('');
     const renderBotom = ({ item }: { item: any }) => (
         <TouchableOpacity>
@@ -64,6 +32,7 @@ const Home = () => {
                 keyExtractor={(item, index) => index.toString()}
                 style={styles.fList}
                 numColumns={2}
+                showsVerticalScrollIndicator={false}
             />
             <TouchableOpacity style={styles.VM}>
                 <Text  style={styles.TxtVM}>VIEW MORE</Text>
@@ -71,7 +40,7 @@ const Home = () => {
         </View>
     )
     const renderItem = ({ item }: { item: any }) => (
-        <TouchableOpacity >
+        <TouchableOpacity onPress={() => navigation.navigate('ListPrd',item)} >
             <Image
                 source={{ uri: item.img }}
                 style={styles.Img}
@@ -106,10 +75,11 @@ const Home = () => {
             <FlatList
                 data={DATA}
                 renderItem={renderItem}
-                keyExtractor={(item, index) => index.toString()}
+                keyExtractor={item => item.categoryID?.toString()}
                 style={styles.fList}
                 ListHeaderComponent={RenderHeader}
                 ListFooterComponent={RenderFooter}
+                showsVerticalScrollIndicator={false}
             />
         </View>
     )
