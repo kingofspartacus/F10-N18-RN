@@ -9,3 +9,4 @@
 - Add Image to login screen.
 - Add register screen
 - Add some simple validate for TextInput in resgister screen
+- Change global state (isLoggedin) using useReducer and useContext --> Now User can move from login screen to home screen

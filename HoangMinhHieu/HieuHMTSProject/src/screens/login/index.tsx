@@ -1,6 +1,8 @@
 import React, {useContext, useState, useEffect} from 'react';
 import LoginComponent from "../../components/Login";
 import {useNavigation, useRoute} from "@react-navigation/native";
+import { GlobalContext, useGlobalContext } from '../../context/Provider';
+import loginUser from '../../context/actions/auth/loginUser';
 
 
 interface data{
@@ -16,10 +18,12 @@ export interface formLogin{
 const Login = () => {
 
     const [form, setForm] = useState<formLogin>({})
+    const {authDispatch} = useGlobalContext()
 
     const onSubmit = () => {
         if(form.phone_number && form.password){
             console.log('login')
+            loginUser()(authDispatch)
         }
     }
 

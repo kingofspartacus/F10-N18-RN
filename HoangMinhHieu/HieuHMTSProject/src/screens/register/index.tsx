@@ -1,6 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react';
 import RegisterComponent from "../../components/Register";
-import { Text, View, TextInput } from 'react-native';
 
 interface data{
     name: any;
@@ -65,7 +64,6 @@ const Register = () => {
             onChange={onChange}
             errors={errors}
         />
-        // <View><Text>Nothing</Text></View>
     );
 }
 
