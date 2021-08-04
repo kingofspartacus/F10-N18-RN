@@ -1,33 +1,25 @@
 var data = [
   {
     id: 1,
-    url: 'https://www.forever21.com/dw/image/v2/BFKH_PRD/on/demandware.static/-/Sites-f21-master-catalog/default/dw75085461/3_back_750/00435309-01.jpg?sw=400&sh=600'
+    url: 'https://images-na.ssl-images-amazon.com/images/I/71G9Hu4jXBL._SL1500_.jpg'
   },
   {
     id: 2,
-    url: 'https://www.forever21.com/dw/image/v2/BFKH_PRD/on/demandware.static/-/Sites-f21-master-catalog/default/dw15dfad06/1_front_750/00432083-02.jpg?sw=400&sh=600'
+    url: 'https://kenh14cdn.com/thumb_w/660/203336854389633024/2021/4/20/xxmeofficial1756897801413789146215604407732069441351738n-1618895602090587322263.jpg'
   },
   {
     id: 3,
-    url: 'https://www.forever21.com/dw/image/v2/BFKH_PRD/on/demandware.static/-/Sites-f21-master-catalog/default/dw0916632d/1_front_750/00430589-01.jpg?sw=400&sh=600'
+    url: 'https://p16-sg-default.akamaized.net/aweme/1080x1080/tiktok-obj/1663133924161537.jpeg'
   },
   {
     id: 4,
-    url: 'https://www.forever21.com/dw/image/v2/BFKH_PRD/on/demandware.static/-/Sites-f21-master-catalog/default/dw1c235a9a/1_front_750/00430307-01.jpg?sw=400&sh=600'
+    url: 'http://product.hstatic.net/200000159059/product/109792839_3093762574026608_9053821329387390614_o_b8f0e028dddf42fcad6d69d561dacf5a_grande.jpg'
   },
   {
     id: 5,
-    url: 'https://www.forever21.com/dw/image/v2/BFKH_PRD/on/demandware.static/-/Sites-f21-master-catalog/default/dwb0d85446/1_front_750/00401124-07.jpg?sw=400&sh=600'
-  },
-  {
-    id: 6,
-    url: 'https://www.forever21.com/dw/image/v2/BFKH_PRD/on/demandware.static/-/Sites-f21-master-catalog/default/dw0f3039e9/1_front_750/00425828-02.jpg?sw=400&sh=600'
-  },
-  {
-    id: 7,
-    url: 'https://www.forever21.com/dw/image/v2/BFKH_PRD/on/demandware.static/-/Sites-f21-master-catalog/default/dw5de6b40a/1_front_750/00430873-01.jpg?sw=400&sh=600'
+    url: 'https://kenh14cdn.com/thumb_w/660/203336854389633024/2021/4/20/nudieye17263614511379702933830587457180962862803337n-16188976070731689022748.jpg'
   },
 
 ]
 
-module.exports = data;
+export default data;

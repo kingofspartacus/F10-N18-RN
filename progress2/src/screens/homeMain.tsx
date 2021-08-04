@@ -1,50 +1,42 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FlatList, StyleSheet, Text, TouchableOpacity, View, Image, TextInput } from 'react-native';
+import homeFlFooter from "../components/homeFlFooter";
+import productData from "../data/productData";
+import HomeImg from "../data/HomeImg";
+import HomeImgFooter from "../data/HomeImgFooter";
+import { getProduct } from "../sevices/api";
+import { getCate } from "../sevices/api";
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-const HomeImg = [
-  {
-    id: 1,
-    url: 'https://images-na.ssl-images-amazon.com/images/I/71G9Hu4jXBL._SL1500_.jpg'
-  },
-  {
-    id: 2,
-    url: 'https://kenh14cdn.com/thumb_w/660/203336854389633024/2021/4/20/xxmeofficial1756897801413789146215604407732069441351738n-1618895602090587322263.jpg'
-  },
-  {
-    id: 3,
-    url: 'https://p16-sg-default.akamaized.net/aweme/1080x1080/tiktok-obj/1663133924161537.jpeg'
-  },
-  {
-    id: 4,
-    url: 'http://product.hstatic.net/200000159059/product/109792839_3093762574026608_9053821329387390614_o_b8f0e028dddf42fcad6d69d561dacf5a_grande.jpg'
-  },
-  {
-    id: 5,
-    url: 'https://kenh14cdn.com/thumb_w/660/203336854389633024/2021/4/20/nudieye17263614511379702933830587457180962862803337n-16188976070731689022748.jpg'
-  },
-]
-const HomeImgFooter = [
-  {
-    id: 1,
-    url: 'https://www.forever21.com/dw/image/v2/BFKH_PRD/on/demandware.static/-/Sites-f21-master-catalog/default/dw75085461/3_back_750/00435309-01.jpg?sw=400&sh=600'
-  },
-  {
-    id: 2,
-    url: 'https://www.arket.com/content/dam/P11/images/campaigns/2021/w13_c_spring-utility/ARKET_21116_C_Spring-ut_3_WEB.jpg'
-  },
-  {
-    id: 3,
-    url: 'https://i.pinimg.com/originals/46/74/8b/46748bdff8ff715319bf9e86d1b9201a.jpg'
-  },
-  {
-    id: 4,
-    url: 'https://duhocminhkhang.com/wp-content/uploads/2020/01/T%E1%BB%95ng-h%E1%BB%A3p-h%C3%ACnh-%E1%BA%A3nh-g%C3%A1i-xinh-%C4%91eo-m%E1%BA%AFt-k%C3%ADnh-c%E1%BB%B1c-cute-10-1.jpg'
-  },
-]
+import data from "../data/productData";
+
+
 const homeMain = ({ }) => {
   const [text, onChangeText] = React.useState("Useless Text");
-  const [number, onChangeNumber] = React.useState(null);
+  let b: any = []
+  for (let i = 0; i < productData.length; i++) {
+    b = b.concat(productData[i].dataMenu)
+    //b = productData.map(e => e.dataMenu[i])
+  }
+  console.log('b', b)
+  // const data = productData.map(e => e.dataMenu)
+  // const [product, setProduct] = useState()
+  // const [categoryList, setCategoryList] = useState();
+  // const [cate, setCate] = useState(); // category Ids
+  // useEffect(() => {
+  //   const getApiProduct = async () => {
+  //     const result = await getProduct()
+  //     setProduct(result.data.data)
+  //   }
+  //   const getCategoryIds = async () => {
+  //     const result = await getCate();
+  //     setCate(result.data.map((e: { id: any; }) => e.id));
+  //     setCategoryList(result.data);
+  //   };
+  //   getCategoryIds()
+  //   getApiProduct()
+  // }, [])
+
   const Header = () => {
     return (
       <View style={{ marginTop: 5 }}>
@@ -55,7 +47,25 @@ const homeMain = ({ }) => {
   const Footer = () => {
     return (
       <View >
-        <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+        <FlatList
+          horizontal
+          data={b}
+          renderItem={({ item }) => {
+            return (
+              <TouchableOpacity >
+                <Image source={{ uri: item.url }} style={{
+                  width: 130,
+                  height: 200,
+                  margin: 5,
+                  justifyContent: 'space-evenly'
+                }} resizeMode="cover" />
+                <Text style={{ fontSize: 20, margin: 5 }}>{item.title}</Text>
+              </TouchableOpacity>
+            )
+          }}
+          keyExtractor={item => item.categoryId?.toString()}
+        />
+        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
           <Text style={[{ fontSize: 30, marginBottom: 8, fontWeight: 'bold' }]}>Shop the 'Gram</Text>
           <Text style={[{ fontSize: 15 }]}>Upload your favorite SB outfit on Instagram with</Text>
           <Text style={[{ fontSize: 15 }]}>#Forever21Men for a chance to be featured!</Text>
@@ -80,7 +90,6 @@ const homeMain = ({ }) => {
   }
 
   return (
-
     <View style={styles.content}>
       <View style={styles.header}>
         <Ionicons name="menu-outline" size={35} style={{ margin: 10 }} />
@@ -93,7 +102,6 @@ const homeMain = ({ }) => {
             onChangeText={onChangeText}
             placeholder="Search"
             placeholderTextColor={'black'}
-
           />
         </TouchableOpacity>
         <TouchableOpacity style={[{ flex: 1, flexDirection: 'row' }]}>
@@ -129,13 +137,13 @@ const styles = StyleSheet.create({
   Seach_title: {
     flexDirection: 'row',
     height: 55,
-    backgroundColor: '#BDBDBD',
+    backgroundColor: '#D8D8D8',
     alignItems: 'center',
   },
 
   btnView: {
     alignSelf: 'center',
-    fontSize: 10,
+    fontSize: 13,
     fontWeight: 'bold',
     color: 'black',
     marginVertical: 5
