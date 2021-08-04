@@ -1,2 +1,3 @@
 02/08: tap dung git commit project
 03/08: Nghien cuu Typescripts, tim cach tao project React Native voi TypeScript nhung chua thanh cong
+04/08: Tao project vs TypeScript, get location
