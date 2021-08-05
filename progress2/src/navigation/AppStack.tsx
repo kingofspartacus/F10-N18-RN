@@ -8,13 +8,17 @@ import homeMain from '../screens/homeMain';
 import wishList from '../screens/wishList';
 import cart from '../screens/cart';
 import me from '../screens/me';
+import productList from '../components/productList';
+import detail from '../components/detail';
 
 const Stack = createStackNavigator();
 const Bottom = createBottomTabNavigator();
 const StackHome = () => {
   return (
     <Stack.Navigator >
-      <Stack.Screen options={{ header: () => null, }} name="homeMain" component={homeMain} />
+      <Stack.Screen options={{ header: () => null }} name="homeMain" component={homeMain} />
+      <Stack.Screen options={{ header: () => null }} name="productList" component={productList} />
+      <Stack.Screen options={{ header: () => null }} name="detail" component={detail} />
     </Stack.Navigator>
   );
 };

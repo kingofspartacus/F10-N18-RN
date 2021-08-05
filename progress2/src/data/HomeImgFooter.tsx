@@ -1,11 +1,11 @@
 var data = [
   {
     id: 1,
-    url: 'https://www.forever21.com/dw/image/v2/BFKH_PRD/on/demandware.static/-/Sites-f21-master-catalog/default/dw75085461/3_back_750/00435309-01.jpg?sw=400&sh=600'
+    url: 'https://i.pinimg.com/564x/9c/f8/f8/9cf8f8debb68bfe1a6f7ba24e40b0c68.jpg'
   },
   {
     id: 2,
-    url: 'https://www.arket.com/content/dam/P11/images/campaigns/2021/w13_c_spring-utility/ARKET_21116_C_Spring-ut_3_WEB.jpg'
+    url: 'https://images-cdn.9gag.com/photo/aB03nNP_700b.jpg'
   },
   {
     id: 3,

@@ -50,7 +50,92 @@ var data = [
         ],
         sold: 120,
         liked: 7,
-        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxhQopNGiLcueEsRWmdegABGaOniMa_PBkICMsI_pGwXZCCrI4QllKC5C-z4xLDP3oZvo&usqp=CAU',
+        url: 'https://media3.scdn.vn/img4/2020/07_08/1jnXz0DsSsbSy5118jfr.jpg',
+        type: 'Mùa hè',
+        shop: 'SADBOYS',
+        price: 250000
+      },
+      {
+        id: 4,
+        title: 'Tshirt TSUN',
+        subtitle: [
+          {
+            id: 1,
+            subtitle1: "FreeShip",
+            subtitle2: "Đồng giá 199k"
+          }
+        ],
+        sold: 120,
+        liked: 7,
+        url: 'https://bizweb.dktcdn.net/100/348/395/articles/img-2519-1-min.jpg?v=1604080834357',
+        type: 'Mùa hè',
+        shop: 'SADBOYS',
+        price: 250000
+      },
+      {
+        id: 5,
+        title: 'Tshirt Davies',
+        subtitle: [
+          {
+            id: 1,
+            subtitle1: "FreeShip",
+            subtitle2: "Đồng giá 199k"
+          }
+        ],
+        sold: 120,
+        liked: 7,
+        url: 'https://bizweb.dktcdn.net/100/287/440/files/ao-thun-nu-form-rong-gia-re.jpg?v=1609823309210',
+        type: 'Mùa hè',
+        shop: 'SADBOYS',
+        price: 250000
+      },
+      {
+        id: 6,
+        title: 'Tshirt BBDC',
+        subtitle: [
+          {
+            id: 1,
+            subtitle1: "FreeShip",
+            subtitle2: "Đồng giá 199k"
+          }
+        ],
+        sold: 120,
+        liked: 7,
+        url: 'https://cf.shopee.vn/file/92640df46a355b32031a5ee5181c5b24',
+        type: 'Mùa hè',
+        shop: 'SADBOYS',
+        price: 250000
+      },
+      {
+        id: 7,
+        title: 'Tshirt Bagic',
+        subtitle: [
+          {
+            id: 1,
+            subtitle1: "FreeShip",
+            subtitle2: "Đồng giá 199k"
+          }
+        ],
+        sold: 120,
+        liked: 7,
+        url: 'https://static.dosi-in.com/images/sukien/27/DSCF8048.jpg',
+        type: 'Mùa hè',
+        shop: 'SADBOYS',
+        price: 250000
+      },
+      {
+        id: 8,
+        title: 'Tshirt MAYER',
+        subtitle: [
+          {
+            id: 1,
+            subtitle1: "FreeShip",
+            subtitle2: "Đồng giá 199k"
+          }
+        ],
+        sold: 120,
+        liked: 7,
+        url: 'https://static.dosi-in.com/images/sukien/24/0A41D2B2-D328-4DDD-A67C-53C9ACB5DC83.jpg',
         type: 'Mùa hè',
         shop: 'SADBOYS',
         price: 250000
@@ -118,7 +203,7 @@ var data = [
   {
     categoryId: 3,
     title: 'Jacket',
-    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8ME69M8-4bBU9Xi3uuwWhfq0SqSaiQ5feOcUhlWgDiiqUvmDDBbvIs_Ikxk980V1Xyfs&usqp=CAU',
+    url: 'http://bizweb.dktcdn.net/100/287/440/files/ao-khoac-bomber-bong-chay-dep-15bf1235-f9a1-4c31-846f-e9b894d02df2.jpg?v=1617610618867',
     dataMenu: [
       {
         id: 1,
@@ -149,7 +234,7 @@ var data = [
         ],
         sold: 120,
         liked: 7,
-        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaOF_gUe0OSjzAR4xx6jHkA5zAJ4Ft8R9FdS5U0EaYWD0g1lkKHNvvOq-TQ8lneZmgj-Y&usqp=CAU',
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcYk2VyDcmY6y4ADfWIFNlfpqoGISnETLNRoXAl8qXfrJX4PhkWC7FTBIeeGZkFaD2khqFL2E&usqp=CAc',
         type: 'Mùa đông',
         shop: 'SADBOYS',
         price: 450000
