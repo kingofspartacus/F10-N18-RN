@@ -31,21 +31,32 @@ const styles = StyleSheet.create({
     img:{
         width:120,
         height:180,
+        marginLeft:10
     },
     fList:{
         backgroundColor:'white',
         height:'auto'
+    },
+    comp:{
+        width:'65%',
+        height:'90%',
     },
     ren:{
         flexDirection:'row',
         width:'100%',
         height:200,
         alignItems:'center',
-        justifyContent:'space-evenly'
+        justifyContent:'space-between'
+    },
+    top:{
+        flexDirection:'row',
+        justifyContent:'space-between'
     },
     body:{
-        width:'55%',
-        height:'90%'
+        
+    },
+    size:{
+        marginTop:'45%'
     },
 })
 export default styles

@@ -10,6 +10,7 @@ import WishList from '../screen/WishList'
 import Cart from '../screen/Cart'
 import Me from '../screen/Me'
 import ListPrd from '../screen/ListPrd'
+import DATA from '../FakeData/DATA'
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 function MyTabs() {
@@ -56,7 +57,7 @@ export default function Navigation() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="MyTabs" component={MyTabs} />
-        <Stack.Screen name="ListPrd" component={ListPrd} />
+        <Stack.Screen name="ListPrd" component={ListPrd}  />
       </Stack.Navigator>
     </NavigationContainer>
   );

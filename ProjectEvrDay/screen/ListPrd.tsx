@@ -1,11 +1,18 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Text, Image, FlatList, View, TouchableOpacity, TextInput } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import styles from '../StyleSheet/ListPrdTS'
 import DATA from '../FakeData/DATA'
 import {useNavigation} from '@react-navigation/native';
 
+const data = {}
 const ListPrd = () => {
+    let detail :any = []
+    for(let i=0;i < DATA.length;i++)
+    {
+        detail= detail.concat(DATA[i].dataList)
+      
+    }
     const navigation = useNavigation();
     const renderBotom = ({ item }: { item: any }) => (
         <TouchableOpacity>
@@ -13,7 +20,7 @@ const ListPrd = () => {
                 source={{ uri: item.img }}
                 style={styles.ImgDT}
             />
-            <Text>{item.dataList.map((e: { name: string; })=>e.name)}</Text>
+            <Text>{item.name}</Text>
         </TouchableOpacity>
     )
     return (
@@ -22,7 +29,7 @@ const ListPrd = () => {
                 <TouchableOpacity onPress={() => navigation.goBack()} >
                     <Ionicons name={'arrow-back-outline'} size={30} />
                 </TouchableOpacity>
-                <Text style={styles.title}>{}</Text>
+                <Text style={styles.title}></Text>
             </View>
             <View style={styles.header}>
                 <TouchableOpacity style={styles.ButtonHead}>
@@ -35,7 +42,7 @@ const ListPrd = () => {
                 </TouchableOpacity>
             </View>
             <FlatList
-                data={DATA}
+                data={detail}
                 renderItem={renderBotom}
                 keyExtractor={(item, index) => index.toString()}
                 numColumns={2}

@@ -6,6 +6,7 @@ import DATA1 from '../FakeData/HomeDT2'
 import DATA from '../FakeData/DATA'
 import {useNavigation} from '@react-navigation/native';
 
+
 const Home = () => {
     const navigation = useNavigation();
     const [search, setSearch] = useState('');
@@ -40,7 +41,7 @@ const Home = () => {
         </View>
     )
     const renderItem = ({ item }: { item: any }) => (
-        <TouchableOpacity onPress={() => navigation.navigate('ListPrd',item)} >
+        <TouchableOpacity onPress={() => navigation.navigate('ListPrd' ,item.categoryID)} >
             <Image
                 source={{ uri: item.img }}
                 style={styles.Img}
