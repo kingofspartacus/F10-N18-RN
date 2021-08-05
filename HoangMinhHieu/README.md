@@ -10,3 +10,5 @@
 - Add register screen
 - Add some simple validate for TextInput in resgister screen
 - Change global state (isLoggedin) using useReducer and useContext --> Now User can move from login screen to home screen
+# 5/8
+- Intialize BackEnd Server with Express connect with MongoDB using Typescript
