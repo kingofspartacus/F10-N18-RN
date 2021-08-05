@@ -2,11 +2,14 @@ import React, { useEffect } from "react";
 import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 import * as Location from 'expo-location';
 import { useState } from "react";
+import { useNavigation } from '../utils/index';
+
 
 export const LandingScreen = () => {
+    const { navigate } = useNavigation();
     const [location, setLocation] = useState<Location.LocationGeocodedAddress>();
     const [errorMsg, setErrorMsg] = useState("");
-    const [displayAddress, setDisplayAddress] = useState("");
+    const [displayAddress, setDisplayAddress] = useState("Waiting...");
 
     useEffect(() => {
         (async () => {
@@ -26,6 +29,11 @@ export const LandingScreen = () => {
                     setLocation(item);
                     let curentAddress = `${item.name}, ${item.street}, ${item.subregion}, ${item.region}, ${item.country}`;
                     setDisplayAddress(curentAddress)
+                    if (curentAddress.length > 0) {
+                        setTimeout(() => {
+                            navigate('homeStack')
+                        }, 1000);
+                    }
                     return
                 }
             }
@@ -90,7 +98,7 @@ const styles = StyleSheet.create({
         color: "#707070"
     },
     addressText: {
-        fontSize: 20,
+        fontSize: 17,
         fontWeight: '200',
         color: '#4F4F4F'
     }
