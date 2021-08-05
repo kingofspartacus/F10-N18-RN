@@ -1,15 +1,16 @@
 import { StyleSheet } from "react-native";
 const styles = StyleSheet.create(
-    {  
+    {
         container:{
             height:'100%'
         },
         header:{
             height:50,
             width:'100%',
-            justifyContent:'center',
+            alignItems:'center',
             borderBottomWidth:0.2,
             borderBottomColor:'grey',
+            flexDirection:'row',
         },
         txttitle:{
             fontWeight:'bold',
@@ -24,26 +25,30 @@ const styles = StyleSheet.create(
             borderBottomColor:'grey',
             alignItems:'center',
             backgroundColor:'#fafafa',
+            flexDirection:'row',
         },
         txtcount:{
             color:'#969696',
             fontWeight:'bold'
         },
-        list:{
-            height:'auto'
+        txttotal:{
+            fontWeight:'bold'
         },
         flat:{
             flexDirection:'row',
             height:200,
             width:'100%',
             borderBottomWidth:1,
-            borderBottomColor:'#e0e0e0'
+            borderBottomColor:'#e0e0e0',
 
+        },
+        list:{
+            height:'auto', 
+            backgroundColor:'#ffffff' 
         },
         img:{
             height:180,
             width:120,
-
         },
         description:{
             height:180,
@@ -107,7 +112,85 @@ const styles = StyleSheet.create(
             fontWeight:'bold',
             fontSize:15,
         },
-      
+        
+   
+        
+        summary:{
+            height:220,
+            width:'100%',
+            backgroundColor:'#f5f5f5',
+        },
+        ordersummary:{
+           height:40,
+           justifyContent:'center',
+           alignItems:'center', 
+           width:'100%',
+          
+        },
+        txtordersummary:{
+            fontSize:15,
+            fontWeight:'bold',
+        },
+        bill:{
+            flexDirection:'row',
+            justifyContent:'space-between',
+            marginLeft:10,
+            marginRight:10,
+            alignItems:'baseline',
+        },
+        txtsubtotal:{
+            fontSize:18,
+            margin:5,
+        },
+        total:{
+            fontSize:18,
+            margin:5,
+            fontWeight:'bold'
+        },
+        promotioncode:{
+            justifyContent:'space-between',
+            width:'100%',
+            height:60,
+            flexDirection:'row',
+            alignItems:'center',
+            backgroundColor:'#ffffff',
+            marginTop:10,
+        },
+        txtpromotioncode:{
+            marginLeft:10,
+            fontWeight:'bold',
+            fontSize:15
+        },
+        save:{
+            height:'100%',
+            width:'100%',
+        },
+        titsave:{
+            height:50,
+            justifyContent:'center',
+            alignItems:'center',
+            borderBottomColor:'#e0e0e0',
+            borderBottomWidth:1,
+        },
+        txttitsave:{
+            fontWeight:'bold',
+            fontSize:15,
+        },
+        checkout:{
+            width:'100%',
+            height:50,
+            justifyContent:'center',
+            alignItems:'center',
+        },
+        btncheckout:{
+            width:"92%",
+            height:'70%',
+            backgroundColor:'yellow',
+            justifyContent:'center',
+            alignItems:'center'
+        },
+        txtcheckout:{
+            fontWeight:'bold'
+        },
     })
-
-export default styles
+ export default styles

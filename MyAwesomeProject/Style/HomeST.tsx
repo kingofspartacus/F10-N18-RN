@@ -3,7 +3,7 @@ const styles = StyleSheet.create(
     {
         screen:{
             height:'100%',
-            backgroundColor:'#f0f0f0'
+            backgroundColor:'#ffffff'
             
         },
         title:{
@@ -101,9 +101,25 @@ const styles = StyleSheet.create(
             height:230,
         },
         imgF:{
-            width:130,
+            width:150,
             height:200,
             justifyContent:'space-evenly',
+        },
+        information:{
+            width:'100%',
+            height:60,
+            justifyContent:'center',
+            alignItems:'center',
+            
+        },
+        txttitle:{
+            fontSize:12,
+            width:150, 
+           
+        },
+        txtprice:{
+            fontWeight:'bold',
+            fontSize:15,
         },
         recently:{
             flexDirection:'row',
@@ -118,8 +134,8 @@ const styles = StyleSheet.create(
             
         },
         btnclear:{
-            width:60,
-            height:30,
+            width:70,
+            height:40,
             justifyContent:'center',
             alignItems:'center',
             backgroundColor:'#f5f5f5',

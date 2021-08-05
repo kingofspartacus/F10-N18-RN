@@ -19,7 +19,7 @@ var data = [
           url: 'https://360boutique.vn/wp-content/uploads/2021/05/APHTK258-8-400x500.jpg',
           type: 'Mùa hè',
           shop: '360Boutique',
-          price: 195.300 
+          price: 195300 
         },
         {
           id: 2,
@@ -36,7 +36,7 @@ var data = [
           url: 'https://360boutique.vn/wp-content/uploads/2021/05/APHTK260-1-400x500.jpg',
           type: 'Mùa hè',
           shop: '360Boutique',
-          price: 195.300
+          price: 195300
         },
         {
           id: 3,
@@ -53,7 +53,7 @@ var data = [
           url: 'https://360boutique.vn/wp-content/uploads/2021/05/APHTK253-8-400x500.jpg',
           type: 'Mùa hè',
           shop: '360Boutique',
-          price: 250000
+          price: 449000
         },
       ]
     },
@@ -135,7 +135,7 @@ var data = [
           url: 'https://360boutique.vn/wp-content/uploads/2021/04/SHDTK221-6-400x500.jpg',
           type: 'Mùa hè',
           shop: '360Boutique',
-          price: 450000
+          price: 550000
         },
         {
           id: 2,
@@ -152,7 +152,7 @@ var data = [
           url: 'https://360boutique.vn/wp-content/uploads/2021/03/STDTK208-19-400x500.jpg',
           type: 'Mùa hè',
           shop: '360Boutique',
-          price: 450000
+          price: 450000 
         },
         {
           id: 3,

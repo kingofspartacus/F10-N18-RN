@@ -28,19 +28,19 @@ const BottomTab =()=>{
           let color;
           if (route.name === 'Home') {
             iconName = focused ? 'home' : 'home-outline';
-            color = focused ? 'red' : '#6E6E6E';
+            color = focused ? 'black' : '#6E6E6E';
             return <Ionicons name={iconName} size={30} color={color} />;
           } else if (route.name === 'Wishlist') {
             iconName = focused ? 'heart' : 'heart-outline';
-            color = focused ? 'red' : '#6E6E6E';
+            color = focused ? 'black' : '#6E6E6E';
             return <Ionicons name={iconName} size={30} color={color} />;
           } else if (route.name === 'Cart') {
             iconName = focused ? 'reader' : 'reader-outline';
-            color = focused ? 'red' : '#6E6E6E';
+            color = focused ? 'black' : '#6E6E6E';
             return <Ionicons name={iconName} size={30} color={color} />;
           } else if (route.name === 'Me') {
             iconName = focused ? 'person' : 'person-outline';
-            color = focused ? 'red' : '#6E6E6E';
+            color = focused ? 'black' : '#6E6E6E';
             return <Ionicons name={iconName} size={30} color={color} />;
           }
         },

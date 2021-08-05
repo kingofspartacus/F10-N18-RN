@@ -4,7 +4,12 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import styles from '../Style/WishlistST'
 import Data from '../Data/DataWishlist'
 const Wishlist = () => {
-    const renderItem1= ({item}:{item:any})=>(
+  let count :any[]=[]
+  for(let i=0;i<Data.length;i++)
+  {
+    count = Data.map((e:{id:any})=>e.id)[i]
+  }
+  const renderItem1= ({item}:{item:any})=>(
       <View style={styles.flat}>
           <TouchableOpacity  style={{margin:10}} >
                   <Image source={{ uri: item.photo }} style={styles.img}/>
@@ -12,7 +17,7 @@ const Wishlist = () => {
           <View style={styles.description}>
             <View style={styles.information}>
               <View>
-                <Text style={styles.txtprice}>{item.price}</Text>
+                <Text style={styles.txtprice}>₫{item.price}</Text>
                 <Text style={styles.txtname}>{item.name}</Text>
               </View>
               <TouchableOpacity>
@@ -43,18 +48,23 @@ const Wishlist = () => {
 
     
     return (
-        <View>
+        <View style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.txttitle}>Wishlist</Text>
             </View>
             <View style={styles.count}>
-                <Text style={styles.txtcount}>2 Item(s)</Text>
+                <Text style={styles.txtcount}>{count} Item(s)</Text>
             </View>
-            <FlatList 
+           
+              <FlatList 
                  data={Data}
                  renderItem={renderItem1}
                  keyExtractor={(item,index)=> index.toString()}
+                 showsVerticalScrollIndicator={false}
+                 style={styles.list}
                 />
+              
+            
         </View>
         
     )

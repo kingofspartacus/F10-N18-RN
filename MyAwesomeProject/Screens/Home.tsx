@@ -14,40 +14,44 @@ const Home = () => {
         // b= Product.map(e => e.dataMenu[i])
       
     }
-    console.log('b',b)
+    
     const Header =()=>{
        return (
         <View style={styles.offer}>
         <TouchableOpacity style={styles.btnoffer}>
                 <Text style={styles.txtoffer}>All Special Offers(12)</Text>
         </TouchableOpacity>
-        <Text></Text>
         </View>
        )
     }
     const Footer =()=>{
         return(
     <View >
-        <View>
-        <View style={styles.recently}>
-            <Text style={styles.txtrecently}>RECENTLY VIEWED</Text>
-            <TouchableOpacity style={styles.btnclear}>
-                <Text style={styles.txtrecently}>CLEAR</Text>
-            </TouchableOpacity>
-        </View>
-        <FlatList 
-                horizontal
-                data={b}
-                renderItem={({ item }) => {
-                  return (
-                    <TouchableOpacity style={{ marginLeft:10 }}  >
-                      <Image source={{ uri: item.url}} style={styles.imgF}  resizeMode="cover" />
-                     <Text>{item.title}</Text>
-                    </TouchableOpacity>
-                  )
-                }}
-                
-                />
+        <View >
+            <View style={styles.recently}>
+                <Text style={styles.txtrecently}>RECENTLY VIEWED</Text>
+                <TouchableOpacity style={styles.btnclear}>
+                    <Text style={styles.txtrecently}>CLEAR</Text>
+                </TouchableOpacity>
+            </View>
+            <FlatList 
+                    horizontal
+                    data={b}
+                    renderItem={({ item }) => {
+                    return (
+                        <View>
+                            <TouchableOpacity style={{ marginLeft:10 }}  >
+                                <Image source={{ uri: item.url}} style={styles.imgF}  resizeMode="cover" />
+                                <View style={styles.information}>
+                                    <Text style={styles.txttitle}>{item.title}</Text>
+                                    <Text style={styles.txtprice}>{item.price}</Text>
+                                </View>
+                                
+                            </TouchableOpacity>
+                            
+                        </View>
+                    )
+                    }}/>
         </View>
         
         <View style={styles.brand}>
