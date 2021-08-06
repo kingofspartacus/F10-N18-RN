@@ -37,5 +37,11 @@ const styles = StyleSheet.create({
         backgroundColor:'white',
         height:'auto'
     },
+    price:{
+        fontWeight:'bold'
+    },
+    name:{
+        
+    },
 })
 export default styles

@@ -5,13 +5,13 @@ import styles from '../StyleSheet/ListPrdTS'
 import DATA from '../FakeData/DATA'
 import {useNavigation} from '@react-navigation/native';
 
-const data = {}
-const ListPrd = () => {
+const ListPrd = ({ route }: { route: any }) => {
+    const { ListPrd } = route.params;
+    const DetailDT = ListPrd.dataList
     let detail :any = []
     for(let i=0;i < DATA.length;i++)
     {
         detail= detail.concat(DATA[i].dataList)
-      
     }
     const navigation = useNavigation();
     const renderBotom = ({ item }: { item: any }) => (
@@ -20,6 +20,7 @@ const ListPrd = () => {
                 source={{ uri: item.img }}
                 style={styles.ImgDT}
             />
+            <Text>{item.price} $</Text>
             <Text>{item.name}</Text>
         </TouchableOpacity>
     )
@@ -29,7 +30,7 @@ const ListPrd = () => {
                 <TouchableOpacity onPress={() => navigation.goBack()} >
                     <Ionicons name={'arrow-back-outline'} size={30} />
                 </TouchableOpacity>
-                <Text style={styles.title}></Text>
+                <Text style={styles.title}>{ListPrd.categoryName}</Text>
             </View>
             <View style={styles.header}>
                 <TouchableOpacity style={styles.ButtonHead}>
@@ -42,7 +43,7 @@ const ListPrd = () => {
                 </TouchableOpacity>
             </View>
             <FlatList
-                data={detail}
+                data={DetailDT}
                 renderItem={renderBotom}
                 keyExtractor={(item, index) => index.toString()}
                 numColumns={2}

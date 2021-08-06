@@ -4,11 +4,13 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import styles from '../StyleSheet/HomeTS'
 import DATA1 from '../FakeData/HomeDT2'
 import DATA from '../FakeData/DATA'
-import {useNavigation} from '@react-navigation/native';
 
 
-const Home = () => {
-    const navigation = useNavigation();
+
+const Home = ({ navigation }: { navigation: any }) => {
+    const onList = (data: any) => () =>{
+          navigation.navigate('ListPrd', { ListPrd: data });
+        }
     const [search, setSearch] = useState('');
     const renderBotom = ({ item }: { item: any }) => (
         <TouchableOpacity>
@@ -41,7 +43,7 @@ const Home = () => {
         </View>
     )
     const renderItem = ({ item }: { item: any }) => (
-        <TouchableOpacity onPress={() => navigation.navigate('ListPrd' ,item.categoryID)} >
+        <TouchableOpacity onPress={onList(item)} >
             <Image
                 source={{ uri: item.img }}
                 style={styles.Img}
