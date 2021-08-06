@@ -8,20 +8,13 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 const homeMain = ({ navigation }: { navigation: any }) => {
   const [text, onChangeText] = React.useState("Useless Text");
-  const onMoveToProduct = (data:
-    {
-      id: number; title: string; subtitle:
-      { id: number; subtitle1: string; subtitle2: string; }[];
-      sold: number; liked: number; url: string; type: string; shop: string; price: number;
-    }[]) => () => {
-      navigation.navigate('productList', { productList: data });
-    }
-  let b: any = []
-  for (let i = 0; i < productData.length; i++) {
-    b = b.concat(productData[i].dataMenu)
+  const onMoveToProduct = (data: any) => () => {
+    navigation.navigate('productList', { productList: data });
   }
+  let b: any = []
   let quantytity: any = []
   for (let i = 0; i < productData.length; i++) {
+    b = b.concat(productData[i].dataMenu)
     quantytity = productData.map(e => e.categoryId)[i]
   }
   const Header = () => {
@@ -61,7 +54,7 @@ const homeMain = ({ navigation }: { navigation: any }) => {
         </View>
         <View style={styles.FooterImg}>
           {
-            HomeImgFooter.map((e: { id: React.Key | null | undefined; url: any; }, i: any) => {
+            HomeImgFooter.map((e: any, i: any) => {
               return (
                 <View key={e.id} style={styles.margin10}>
                   <Image source={{ uri: e.url }} style={styles.imgFooter} />
@@ -100,7 +93,7 @@ const homeMain = ({ navigation }: { navigation: any }) => {
         data={productData}
         renderItem={({ item }) => {
           return (
-            <TouchableOpacity style={styles.bttn} onPress={onMoveToProduct(item.dataMenu)} >
+            <TouchableOpacity style={styles.bttn} onPress={onMoveToProduct(item)} >
               <Image source={{ uri: item.url }} style={styles.imgbttn} resizeMode="cover" />
             </TouchableOpacity>
           )
