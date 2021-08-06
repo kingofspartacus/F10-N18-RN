@@ -55,6 +55,91 @@ var data = [
           shop: '360Boutique',
           price: 449000
         },
+        {
+          id: 4,
+          title: 'Áo phông nam APHTK249',
+          subtitle: [
+            {
+              id: 1,
+              subtitle1: "FreeShip",
+              subtitle2: "Đồng giá 199k"
+            }
+          ],
+          sold: 120,
+          liked: 7,
+          url: 'https://360boutique.vn/wp-content/uploads/2021/05/APHTK253-8-400x500.jpg',
+          type: 'Mùa hè',
+          shop: '360Boutique',
+          price: 449000
+        },
+        {
+          id: 5,
+          title: 'Áo phông nam APHTK249',
+          subtitle: [
+            {
+              id: 1,
+              subtitle1: "FreeShip",
+              subtitle2: "Đồng giá 199k"
+            }
+          ],
+          sold: 120,
+          liked: 7,
+          url: 'https://360boutique.vn/wp-content/uploads/2021/05/APHTK253-8-400x500.jpg',
+          type: 'Mùa hè',
+          shop: '360Boutique',
+          price: 449000
+        },
+        {
+          id: 6,
+          title: 'Áo phông nam APHTK249',
+          subtitle: [
+            {
+              id: 1,
+              subtitle1: "FreeShip",
+              subtitle2: "Đồng giá 199k"
+            }
+          ],
+          sold: 120,
+          liked: 7,
+          url: 'https://360boutique.vn/wp-content/uploads/2021/05/APHTK253-8-400x500.jpg',
+          type: 'Mùa hè',
+          shop: '360Boutique',
+          price: 449000
+        },
+        {
+          id: 7,
+          title: 'Áo phông nam APHTK249',
+          subtitle: [
+            {
+              id: 1,
+              subtitle1: "FreeShip",
+              subtitle2: "Đồng giá 199k"
+            }
+          ],
+          sold: 120,
+          liked: 7,
+          url: 'https://360boutique.vn/wp-content/uploads/2021/05/APHTK253-8-400x500.jpg',
+          type: 'Mùa hè',
+          shop: '360Boutique',
+          price: 449000
+        },
+        {
+          id: 8,
+          title: 'Áo phông nam APHTK249',
+          subtitle: [
+            {
+              id: 1,
+              subtitle1: "FreeShip",
+              subtitle2: "Đồng giá 199k"
+            }
+          ],
+          sold: 120,
+          liked: 7,
+          url: 'https://360boutique.vn/wp-content/uploads/2021/05/APHTK253-8-400x500.jpg',
+          type: 'Mùa hè',
+          shop: '360Boutique',
+          price: 449000
+        },
       ]
     },
     {
@@ -170,6 +255,64 @@ var data = [
           type: 'Mùa hè',
           shop: '360Boutique',
           price: 450000
+        },
+      ]
+    },
+    {
+      categoryId: 4,
+      title: 'Polo',
+      url: 'https://360boutique.vn/wp-content/uploads/2021/04/POTTK214-1-2-400x500.jpg',
+      dataMenu: [
+        {
+          id: 1,
+          title: 'Áo polo nam POMTK204',
+          subtitle: [
+            {
+              id: 1,
+              subtitle1: "FreeShip",
+              subtitle2: "Đồng giá 199k"
+            }
+          ],
+          sold: 120,
+          liked: 7,
+          url: 'https://360boutique.vn/wp-content/uploads/2021/05/POMTK222-1-400x500.jpg',
+          type: 'Mùa hè',
+          shop: '360Boutique',
+          price: 250000
+        },
+        {
+          id: 2,
+          title: 'Áo polo nam POMTK222',
+          subtitle: [
+            {
+              id: 1,
+              subtitle1: "FreeShip",
+              subtitle2: "Đồng giá 199k"
+            }
+          ],
+          sold: 120,
+          liked: 7,
+          url: 'https://360boutique.vn/wp-content/uploads/2021/05/POMTK204-1-400x500.jpg',
+          type: 'Mùa hè',
+          shop: '360Boutique',
+          price: 300000
+        },
+        {
+          id: 3,
+          title: 'Áo polo nam POMTK204',
+          subtitle: [
+            {
+              id: 1,
+              subtitle1: "FreeShip",
+              subtitle2: "Đồng giá 199k"
+            }
+          ],
+          sold: 120,
+          liked: 7,
+          url: 'https://360boutique.vn/wp-content/uploads/2021/04/POTTK217-1-2-400x500.jpg',
+          type: 'Mùa hè',
+          shop: '360Boutique',
+          price: 400000
         },
       ]
     },

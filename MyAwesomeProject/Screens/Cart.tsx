@@ -6,6 +6,8 @@ import Data from '../Data/DataWishlist'
 // const [count,setcount] =useState(0)
 
 const Cart = () => {
+    let result :number
+    result= Data.reduce((acc,total)=> acc + total.price,0)
     
     const renderItem1= ({item}:{item:any})=>(
         <View style={styles.flat}>
@@ -91,7 +93,7 @@ const Cart = () => {
             </View>
             <View style={styles.count}>
                 <Text style={styles.txtcount}>3 Item(s): Total (excluding delivery):</Text>
-                <Text style={styles.txttotal}>₫2099000</Text>
+                <Text style={styles.txttotal}>₫{result}</Text>
             </View>
             <FlatList 
                     data={Data}

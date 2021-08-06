@@ -12,14 +12,18 @@ const Home = () => {
     {
        b= b.concat(Product[i].dataMenu)
         // b= Product.map(e => e.dataMenu[i])
-      
+    }
+    let count : number
+    for(let i=0;i < Product.length; i++)
+    {
+        count = Product.map(e=>e.categoryId)[i]
     }
     
     const Header =()=>{
        return (
         <View style={styles.offer}>
         <TouchableOpacity style={styles.btnoffer}>
-                <Text style={styles.txtoffer}>All Special Offers(12)</Text>
+                <Text style={styles.txtoffer}>All Special Offers({count})</Text>
         </TouchableOpacity>
         </View>
        )
@@ -44,7 +48,7 @@ const Home = () => {
                                 <Image source={{ uri: item.url}} style={styles.imgF}  resizeMode="cover" />
                                 <View style={styles.information}>
                                     <Text style={styles.txttitle}>{item.title}</Text>
-                                    <Text style={styles.txtprice}>{item.price}</Text>
+                                    <Text style={styles.txtprice}>₫{item.price}</Text>
                                 </View>
                                 
                             </TouchableOpacity>
