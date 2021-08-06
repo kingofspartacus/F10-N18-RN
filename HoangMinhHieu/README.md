@@ -12,3 +12,6 @@
 - Change global state (isLoggedin) using useReducer and useContext --> Now User can move from login screen to home screen
 # 5/8
 - Intialize BackEnd Server with Express connect with MongoDB using Typescript
+# 6/8
+- Create API for creating users and login
+- Connect API with App using Axios

@@ -8,10 +8,13 @@ const AppNavContainer = () =>{
 
     const {authState} = useGlobalContext()
     const [isAuthenticated, setIsAuthenticated] = useState(false)
+    console.log(authState)
 
     return(
         <NavigationContainer>
-            {authState ? <HomeNavigator/> : <AuthNavigator/>}
+            {/* {authState ? <HomeNavigator/> : <AuthNavigator/>} */}
+            {authState ? <AuthNavigator/>:<HomeNavigator/>}
+            {/* <AuthNavigator/> */}
         </NavigationContainer>
     );
 }
