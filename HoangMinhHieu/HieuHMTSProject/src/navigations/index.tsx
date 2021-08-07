@@ -6,15 +6,12 @@ import { useGlobalContext } from '../context/Provider';
 
 const AppNavContainer = () =>{
 
-    const {authState} = useGlobalContext()
+    const {authState : {isLoggedIn}} = useGlobalContext()
     const [isAuthenticated, setIsAuthenticated] = useState(false)
-    console.log(authState)
 
     return(
         <NavigationContainer>
-            {/* {authState ? <HomeNavigator/> : <AuthNavigator/>} */}
-            {authState ? <AuthNavigator/>:<HomeNavigator/>}
-            {/* <AuthNavigator/> */}
+            {isLoggedIn ? <HomeNavigator/> : <AuthNavigator/>}
         </NavigationContainer>
     );
 }

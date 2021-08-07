@@ -6,6 +6,7 @@ import Input from "../../components/commons/Input";
 import CustomButton from "../../components/commons/CustomButton";
 import styles from "./styles"
 import {REGISTER} from "../../constants/routeNames";
+import { useGlobalContext } from '../../context/Provider';
 
 interface LoginComponentsProps{
     onChange: any;
@@ -16,6 +17,7 @@ const LoginComponent: FC<LoginComponentsProps> = ({onChange, onSubmit}) => {
 
     const {navigate} = useNavigation();
     const [isSecureEntry, setIsSecureEntry] = useState(true);
+    const {authState : {isLoggedIn}} = useGlobalContext()
 
     return (
         <Container>

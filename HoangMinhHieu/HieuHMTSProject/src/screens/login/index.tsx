@@ -19,13 +19,10 @@ const Login = () => {
 
     const [form, setForm] = useState<formLogin>({})
     const {authDispatch} = useGlobalContext()
-    const {authState} = useGlobalContext()
 
     const onSubmit = () => {
         if(form.phone_number && form.password){
-            console.log('login')
             loginUser(form)(authDispatch)
-            console.log(authState)
         }
     }
 

@@ -11,9 +11,8 @@ export const GlobalContext = createContext<{
 }) 
 const GlobalProvider = ({children} : { children: React.ReactNode }) => {
     const [authState, authDispatch] = useReducer(auth, authInitialState)
-    const value = { authState, authDispatch }
 
-    return <GlobalContext.Provider value={value}>{children}</GlobalContext.Provider>
+    return <GlobalContext.Provider value={{authState, authDispatch}}>{children}</GlobalContext.Provider>
 }
 export const useGlobalContext = () => useContext(GlobalContext)
 export default GlobalProvider

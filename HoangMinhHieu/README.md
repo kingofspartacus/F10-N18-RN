@@ -15,3 +15,5 @@
 # 6/8
 - Create API for creating users and login
 - Connect API with App using Axios
+# 7/8
+- Fix some minor bug in Navigations
