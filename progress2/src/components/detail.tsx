@@ -3,11 +3,15 @@ import { View, Text, Image, FlatList, StatusBar, ScrollView, StyleSheet, Touchab
 import { useNavigation } from '@react-navigation/native';
 import Entypo from 'react-native-vector-icons/Entypo'
 import Ionicons from 'react-native-vector-icons/Ionicons'
-
+import { useDispatch, useSelector } from "react-redux";
 
 const detail = ({ route }: { route: any }) => {
   const navigation = useNavigation();
   const { detail } = route.params;
+  const dispatch = useDispatch();
+  const onAddCart = () => {
+    dispatch({ type: 'ADD_CART', detail: detail })
+  }
   return (
     <View>
       <View style={styles.header}>
@@ -46,7 +50,7 @@ const detail = ({ route }: { route: any }) => {
           </TouchableOpacity>
           <Text style={{ marginLeft: 10 }}>MOCHA</Text>
         </View>
-        <TouchableOpacity style={{ backgroundColor: 'black', width: '60%', height: 40, marginLeft: 30, }}>
+        <TouchableOpacity style={{ backgroundColor: 'black', width: '60%', height: 40, marginLeft: 30, }} onPress={onAddCart}>
           <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold', alignSelf: 'center', marginTop: 5 }}>ADD TO CARD</Text>
         </TouchableOpacity>
         <Ionicons name="heart-outline" size={35} style={{ marginLeft: 10, }} />
