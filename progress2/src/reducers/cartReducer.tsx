@@ -11,7 +11,7 @@ interface data {
 export default function cartReducer(state = initState, action) {
   switch (action.type) {
     case "ADD_CART":
-      console.log('action', action) // => { type: 'ADD_CART', detail: detail }
+      // console.log('action', action) // => { type: 'ADD_CART', detail: detail }
       const checkExist = state.cart.find(e => e.id === action.detail.id)
       const newCart = checkExist ?
         // truong hợp đã có sản phẩm đấy trong list

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { View, Text, Image, StyleSheet, TouchableOpacity, FlatList } from 'react-native'
-import Entypo from 'react-native-vector-icons/Entypo'
+import styles from '../styles/wishListStyle';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 const DATA = [
@@ -34,36 +34,36 @@ const DATA = [
 ]
 const WishList = () => {
   const renderItem = ({ item }: { item: any }) => (
-    <View style={{ height: 200, flexDirection: 'row', borderBottomColor: '#F2F2F2', borderBottomWidth: 1 }}>
-      <TouchableOpacity style={{ alignSelf: 'center' }}>
+    <View style={styles.rederItemContent}>
+      <TouchableOpacity style={styles.alignSelf}>
         <Image
-          style={{ width: 120, height: 170, marginLeft: 10 }}
+          style={styles.imgItem}
           source={{ uri: item.photo, }}
         />
       </TouchableOpacity>
       <View>
-        <View style={{ flexDirection: 'row', height: '50%' }}>
-          <View style={{ marginTop: 11, marginLeft: 10, width: 230 }}>
-            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>{item.price}</Text>
-            <Text style={{ color: 'silver' }}>{item.name}</Text>
+        <View style={styles.priceContent}>
+          <View style={styles.priceContent2}>
+            <Text style={styles.Size15Bold}>{item.price}</Text>
+            <Text style={styles.Colorsilver}>{item.name}</Text>
           </View>
           <TouchableOpacity>
-            <Ionicons name='ellipsis-vertical' size={25} style={{ marginTop: 11 }} />
+            <Ionicons name='ellipsis-vertical' size={25} style={styles.marginTop10} />
           </TouchableOpacity>
         </View>
-        <View style={{ height: 100 }}>
-          <View style={{ flexDirection: 'row', height: 50, marginLeft: 10, marginRight: 10 }}>
-            <TouchableOpacity style={{ flexDirection: 'row', borderRightColor: 'silver', borderRightWidth: 1, width: '39%', height: '50%', justifyContent: 'space-between' }}>
-              <Text style={{ fontWeight: 'bold', fontSize: 14 }}>{item.color}</Text>
+        <View style={styles.height100}>
+          <View style={styles.groupIn4}>
+            <TouchableOpacity style={styles.btnColor}>
+              <Text style={styles.Size15Bold}>{item.color}</Text>
               <Ionicons name='chevron-down-outline' size={17} />
             </TouchableOpacity>
-            <TouchableOpacity style={{ flexDirection: 'row', width: '39%', height: '50%', justifyContent: 'space-between', marginLeft: 10 }}>
-              <Text style={{ fontWeight: 'bold', fontSize: 14 }}>{item.size}</Text>
+            <TouchableOpacity style={styles.btn}>
+              <Text style={styles.Size15Bold}>{item.size}</Text>
               <Ionicons name='chevron-down-outline' size={17} />
             </TouchableOpacity>
           </View>
-          <TouchableOpacity style={{ flexDirection: 'row', width: '37%', height: '50%', justifyContent: 'space-between', marginLeft: 10 }}>
-            <Text style={{ fontWeight: 'bold', fontSize: 14 }}>{item.qty}</Text>
+          <TouchableOpacity style={styles.btn}>
+            <Text style={styles.Size15Bold}>{item.qty}</Text>
             <Ionicons name='chevron-down-outline' size={17} />
           </TouchableOpacity>
         </View>
@@ -71,13 +71,13 @@ const WishList = () => {
     </View>
   );
   return (
-    <View style={[{ marginTop: 10 }]}>
-      <View style={[{ borderBottomWidth: 1, borderBottomColor: '#d9d9d9', height: 40, flexDirection: 'row', marginTop: 10, justifyContent: 'space-between', alignItems: 'center' }]}>
+    <View style={[styles.marginTop10]}>
+      <View style={[styles.header]}>
         <TouchableOpacity>
           <AntDesign name="arrowleft" size={30} />
         </TouchableOpacity>
         <TouchableOpacity>
-          <Text style={[{ marginRight: 160, fontSize: 20, fontWeight: 'bold', textDecorationLine: 'underline' }]}>WishList.</Text>
+          <Text style={[styles.screenName]}>WishList.</Text>
         </TouchableOpacity>
       </View>
       <View>
@@ -93,13 +93,5 @@ const WishList = () => {
     </View>
   )
 }
-const styles = StyleSheet.create({
-  ImageWL: {
-    width: 120,
-    height: 210,
-    marginLeft: 18,
-    marginTop: 15,
-    marginRight: 15,
-  },
-})
+
 export default WishList
