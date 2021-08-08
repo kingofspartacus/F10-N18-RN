@@ -4,3 +4,5 @@
 - 04/08/2021:Continue clone App Forever 21 with Navigation.Create Screen Home,Screen WishList
 - 05/08/2021:Continue clone App Forever 21 and research BE
 - 06/08/2021:Continue clone App Forever 21 and create project with Express by Typescript
+- 07/08/2021:Continue clone App Forever 21
+- 08/08/2021: Complete UI Forever 21

@@ -4,12 +4,15 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 
+
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Wishlist from '../Screens/Wishlist'
 import Cart from '../Screens/Cart'
 import Me from '../Screens/Me'
 import Home from '../Screens/Home';
+import Product from '../Screens/Product'
+import ProductDescrible from '../Screens/ProductDescrible'
 
 const Bottom = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -76,6 +79,8 @@ export default function Appstack() {
     <NavigationContainer>
     <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="BottomTab" component={BottomTab} />
+        <Stack.Screen name="Product" component={Product}/>
+        <Stack.Screen name="ProductDescrible" component={ProductDescrible}/>
       </Stack.Navigator>
    </NavigationContainer>
   );

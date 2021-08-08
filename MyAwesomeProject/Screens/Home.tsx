@@ -2,22 +2,25 @@ import React from 'react';
 import { Text, Image, FlatList, View, TouchableOpacity, TextInput ,StyleSheet} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import styles from '../Style/HomeST'
-import DATA from '../Data/Datamau'
-import Banner from '../Data/Databanner'
-import Product from '../Data/Dataproduct'
-const Home = () => {
+import DATA from '../data/datamau'
+import Banner from '../data/databanner'
+import DataProduct from '../data/Dataproduct'
+const Home = ({navigation}:{navigation: any}) => {
 //  const a = Product[0].dataMenu.concat(Product[1].dataMenu.concat(Product[2].dataMenu))
-    let b :any[] = []
-    for(let i=0;i < Product.length;i++)
-    {
-       b= b.concat(Product[i].dataMenu)
-        // b= Product.map(e => e.dataMenu[i])
-    }
-    let count : number
-    for(let i=0;i < Product.length; i++)
-    {
-        count = Product.map(e=>e.categoryId)[i]
-    }
+const onClick = (data:any)=>()=>{
+    navigation.navigate('Product',{Product: data})
+}
+let b :any[] = []
+for(let i=0;i < DataProduct.length;i++)
+{
+   b= b.concat(DataProduct[i].dataMenu)
+    // b= Product.map(e => e.dataMenu[i])
+}
+let count : number
+for(let i=0;i < DataProduct.length; i++)
+{
+    count = DataProduct.map(e=>e.categoryId)[i]
+}
     
     const Header =()=>{
        return (
@@ -109,10 +112,10 @@ const Home = () => {
                     </TouchableOpacity>
                 </View>
                 <FlatList 
-                data={Banner}
+                data={DataProduct}
                 renderItem={({ item }) => {
                   return (
-                    <TouchableOpacity style={{ marginTop: 10, marginBottom: 10 }}  >
+                    <TouchableOpacity onPress={onClick(item)}  style={{ marginTop: 10, marginBottom: 10 }}  >
                       <Image source={{ uri: item.url }} style={styles.imgB} resizeMode="cover" />
                     </TouchableOpacity>
                   )

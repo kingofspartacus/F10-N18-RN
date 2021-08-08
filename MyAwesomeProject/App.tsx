@@ -5,6 +5,7 @@ import Wishlist from './Screens/Wishlist'
 import Navigation from './Navigation/Appstack'
 import { NavigationContainer } from '@react-navigation/native';
 import Product from './Screens/Product'
+import ProductDescrible from './Screens/ProductDescrible'
 const App = () => {
   return (
       <Navigation/>

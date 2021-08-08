@@ -2,7 +2,7 @@ import React, { Component, useState } from 'react';
 import { Button, ScrollView, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View,Image,FlatList } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import styles from '../Style/CartST'
-import Data from '../Data/DataWishlist'
+import Data from '../data/DataWishlist'
 // const [count,setcount] =useState(0)
 
 const Cart = () => {
