@@ -1,21 +1,23 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { Text, Image, FlatList, View, TouchableOpacity, TextInput } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import styles from '../StyleSheet/ListPrdTS'
 import DATA from '../FakeData/DATA'
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 const ListPrd = ({ route }: { route: any }) => {
     const { ListPrd } = route.params;
+    const onDetail = (data: any) => () => {
+        navigation.navigate('Detail', { Detail: data });
+    }
     const DetailDT = ListPrd.dataList
-    let detail :any = []
-    for(let i=0;i < DATA.length;i++)
-    {
-        detail= detail.concat(DATA[i].dataList)
+    let detail: any = []
+    for (let i = 0; i < DATA.length; i++) {
+        detail = detail.concat(DATA[i].dataList)
     }
     const navigation = useNavigation();
-    const renderBotom = ({ item }: { item: any }) => (
-        <TouchableOpacity>
+    const renderList = ({ item }: { item: any }) => (
+        <TouchableOpacity onPress={onDetail(item)}>
             <Image
                 source={{ uri: item.img }}
                 style={styles.ImgDT}
@@ -44,7 +46,7 @@ const ListPrd = ({ route }: { route: any }) => {
             </View>
             <FlatList
                 data={DetailDT}
-                renderItem={renderBotom}
+                renderItem={renderList}
                 keyExtractor={(item, index) => index.toString()}
                 numColumns={2}
                 showsVerticalScrollIndicator={false}
