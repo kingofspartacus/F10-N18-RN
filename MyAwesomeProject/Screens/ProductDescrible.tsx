@@ -5,9 +5,12 @@ import styles from '../Style/ProductDescribleST'
 import Feather from 'react-native-vector-icons/Feather';
 import Entypo from 'react-native-vector-icons/Entypo'
 import { useNavigation } from '@react-navigation/native';
-
+import { useDispatch, useSelector } from "react-redux";
 const ProductDescrible = ({ route }: { route: any }) => {
-    
+    const dispatch = useDispatch();
+    const onAddcart = ()=>{
+        dispatch({type:'ADD_CART',ProductDescrible: ProductDescrible})
+    }
     const navigation = useNavigation();
     const { ProductDescrible } = route.params;
        return(
