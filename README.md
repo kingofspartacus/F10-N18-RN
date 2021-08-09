@@ -13,3 +13,7 @@ Thursday 05/08/2021: Continue clone app Forever 21  but i have a issue with id p
 
 
 Friday 06/08/2021: Data processing with param, and start learn Express 
+
+
+
+Monday 09/08/2021: REST API with Express and Database in MySql

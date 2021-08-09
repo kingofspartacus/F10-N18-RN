@@ -22,16 +22,37 @@ dbConn.connect();
       return res.send({ data: results, message: 'Product list.' });
   });
 });
-app.delete('/Product', function (req, res) {
-  let IDProduct = req.body.IDProduct;
-  if (!IDProduct) {
-      return res.status(400).send({ error: true, message: 'Please provide user_id' });
-  }
-  dbConn.query('DELETE FROM Product WHERE IDProduct = ?', [IDProduct], function (error, results, fields) {
-      if (error) throw error;
-      return res.send({ error: false, data: results, message: 'User has been updated successfully.' });
-  });
-});
+// app.post('/Product', function (req, res) {
+//     let Product = req.body.Product;
+//     if (!Product) {
+//       return res.status(400).send({ error:true, message: 'Please provide Product' });
+//     }
+//    dbConn.query("INSERT INTO Product SET ? ", { Product: Product }, function (error, results, fields) {
+//   if (error) throw error;
+//     return res.send({ error: false, data: results, message: 'New product has been created successfully.' });
+//     });
+// });
+// app.put('/Product', function (req, res) {
+//     let IDProduct = req.body.IDProduct;
+//     let Product = req.body.Product;
+//     if (!IDProduct || !Product) {
+//       return res.status(400).send({ error: Product, message: 'Please provide Product and IDProduct' });
+//     }
+//     dbConn.query("UPDATE Product SET Product = ? WHERE IDProduct = ?", [Product, IDProduct], function (error, results, fields) {
+//       if (error) throw error;
+//       return res.send({ error: false, data: results, message: 'Product has been updated successfully.' });
+//      });
+//     });
+// app.delete('/Product', function (req, res) {
+//   let IDProduct = req.body.IDProduct;
+//   if (!IDProduct) {
+//       return res.status(400).send({ error: true, message: 'Please provide user_id' });
+//   }
+//   dbConn.query('DELETE FROM Product WHERE IDProduct = ?', [IDProduct], function (error, results, fields) {
+//       if (error) throw error;
+//       return res.send({ error: false, data: results, message: 'User has been updated successfully.' });
+//   });
+// });
  // chỉnh port
  app.listen(3000, function () {
      console.log('Node app is running on port 3000');
