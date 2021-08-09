@@ -6,6 +6,7 @@ import { LandingScreen } from './screens/LandingScreen';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
+import Cart from './screens/Cart';
 
 const swichNavigator = createSwitchNavigator({
   // landingStack: {
@@ -25,13 +26,14 @@ const swichNavigator = createSwitchNavigator({
         HomePage: Home
       }, {
         defaultNavigationOptions: {
-          headerShown: false
+          headerShown: false,
+
         }
       }),
 
       navigationOptions: {
         tabBarIcon: ({ focused, tintColor }) => {
-          let icon = focused == true ? require('./components/images/home.png') : require('./components/images/home.png')
+          let icon = focused == true ? require('./images/home.png') : require("./images/home.png")
           return <Image source={icon} style={styles.tabIcon} />
         }
       }
@@ -44,7 +46,7 @@ const swichNavigator = createSwitchNavigator({
       }),
       navigationOptions: {
         tabBarIcon: ({ focused, tintColor }) => {
-          let icon = focused == true ? require('./components/images/discount.png') : require('./components/images/discount.png')
+          let icon = focused == true ? require('./images/discount.png') : require('./images/discount.png')
           return <Image source={icon} style={styles.tabIcon}></Image>
         }
       }
@@ -53,11 +55,11 @@ const swichNavigator = createSwitchNavigator({
     //Cart tab icon
     Cart: {
       screen: createStackNavigator({
-        CartPage: Home
+        CartPage: Cart
       }),
       navigationOptions: {
         tabBarIcon: ({ focused, tintColor }) => {
-          let icon = focused == true ? require('./components/images/carts.png') : require('./components/images/carts.png')
+          let icon = focused == true ? require('./images/carts.png') : require('./images/carts.png')
           return <Image source={icon} style={styles.tabIcon}></Image>
         }
       }
@@ -70,7 +72,7 @@ const swichNavigator = createSwitchNavigator({
       }),
       navigationOptions: {
         tabBarIcon: ({ focused, tintColor }) => {
-          let icon = focused == true ? require('./components/images/account.png') : require('./components/images/account.png')
+          let icon = focused == true ? require('./images/account.png') : require('./images/account.png')
           return <Image source={icon} style={styles.tabIcon}></Image>
         }
       }
