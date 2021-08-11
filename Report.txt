@@ -1,6 +1,0 @@
-02/08: tap dung git commit project
-03/08: Nghien cuu Typescripts, tim cach tao project React Native voi TypeScript nhung chua thanh cong
-04/08: Tao project vs TypeScript, get location
-05/08: Tim hieu express, Typescript
-06/08: Tim hieu Môngdb, Typescript
-09/08: hoan thanh front-end HomeScreen
