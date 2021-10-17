@@ -59,17 +59,17 @@ const Cart = () => {
       <TouchableOpacity style={styles.alightSelf}>
         <Image
           style={styles.renderIMg}
-          source={{ uri: item.url, }}
+          source={{ uri: item.ImageProduct, }}
         />
       </TouchableOpacity>
       <View>
         <View style={styles.groupIcon}>
           <View style={styles.groupPrice}>
             <View style={{ flexDirection: 'row' }}>
-              <Text style={styles.oldPrice}>{item.price}đ</Text>
-              <Text style={styles.newPrice}>{item.price}đ</Text>
+              <Text style={styles.oldPrice}>{item.Price}đ</Text>
+              <Text style={styles.newPrice}>{item.Price}đ</Text>
             </View>
-            <Text style={styles.greyColor}>{item.title}</Text>
+            <Text style={styles.greyColor}>{item.NameProduct}</Text>
           </View>
           <TouchableOpacity onPress={onRemoveItem(item)}>
             <Ionicons name='ellipsis-vertical' size={25} style={{ marginTop: 11 }} />
@@ -78,11 +78,11 @@ const Cart = () => {
         <View style={{ height: 100 }}>
           <View style={styles.Typecontent}>
             <TouchableOpacity style={styles.ContentShop}>
-              <Text style={styles.txtSize14Bold}>{item.shop}</Text>
+              <Text style={styles.txtSize14Bold}>{item.Description}</Text>
               <Ionicons name='chevron-down-outline' size={17} />
             </TouchableOpacity>
             <TouchableOpacity style={styles.ContentType}>
-              <Text style={styles.txtSize14Bold}>{item.type}</Text>
+              <Text style={styles.txtSize14Bold}>{item.IDManufacturer}</Text>
               <Ionicons name='chevron-down-outline' size={17} />
             </TouchableOpacity>
           </View>
@@ -108,7 +108,7 @@ const Cart = () => {
       <FlatList
         data={data}
         renderItem={renderItem}
-        keyExtractor={item => item.id.toString()}
+        keyExtractor={item => item.IDProduct.toString()}
         ListHeaderComponent={Header}
         ListFooterComponent={Footer}
         style={{ height: 650 }}

@@ -5,10 +5,10 @@ import { useNavigation } from '@react-navigation/native';
 import styles from '../styles/productListStyle';
 const productL = ({ route }: { route: any }) => {
   const { productList } = route.params;
-  const dataListProduct = productList.dataMenu
+  const dataListProduct = productList.dataList
   let quantytity: any = []
   for (let i = 0; i < dataListProduct.length; i++) {
-    quantytity = dataListProduct.map((e: { id: any[]; }) => e.id)[i]
+    quantytity = dataListProduct.map((e: any) => e.IDProduct)[i]
   }
   const navigation = useNavigation();
   const onMoveToDetail = (dataDetail: any) => () => {
@@ -28,7 +28,6 @@ const productL = ({ route }: { route: any }) => {
           <Ionicons name={'arrow-back-outline'} size={30} />
         </TouchableOpacity>
         <Text style={styles.title}>{productList.title}</Text>
-        <View></View>
       </View>
       <View style={styles.header}>
         <TouchableOpacity style={styles.btnHeader}>
@@ -50,13 +49,13 @@ const productL = ({ route }: { route: any }) => {
             <View>
               <TouchableOpacity onPress={onMoveToDetail(item)} >
                 <Image
-                  source={{ uri: item.url }}
+                  source={{ uri: item.ImageProduct }}
                   style={styles.ProductImg}
                 />
               </TouchableOpacity>
               <View style={styles.tleIn4}>
                 <Text style={styles.proTle}>{item.title}</Text>
-                <Text style={styles.proPrice}>{item.price}đ</Text>
+                <Text style={styles.proPrice}>{item.Price}đ</Text>
                 <TouchableOpacity>
                   <Ionicons name={'heart-outline'} size={25} />
                 </TouchableOpacity>

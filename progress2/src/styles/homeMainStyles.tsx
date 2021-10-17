@@ -51,8 +51,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly'
   },
   txtProduct: {
-    fontSize: 18,
-    alignSelf: 'center'
+    fontSize: 15,
+    alignSelf: 'center',
+    fontWeight: 'bold',
+    color: 'blue'
   },
   infor: {
     justifyContent: 'center',

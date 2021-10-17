@@ -21,13 +21,13 @@ const detail = ({ route }: { route: any }) => {
         </TouchableOpacity>
       </View>
       <Image
-        source={{ uri: detail.url }}
+        source={{ uri: detail.ImageProduct }}
         style={styles.ImgDetail}
       />
       <View style={styles.priceContent} >
         <View style={{ marginTop: 10 }}>
-          <Text style={styles.txtPrice}>₫{detail.price}</Text>
-          <Text style={{ color: 'silver' }}>{detail.title}</Text>
+          <Text style={styles.txtPrice}>₫{detail.Price}</Text>
+          <Text style={{ color: 'silver' }}>{detail.NameProduct}</Text>
         </View>
         <View style={{ flexDirection: 'row' }}>
           <View style={styles.startContent}>
