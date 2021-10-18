@@ -24,7 +24,6 @@ interface dataProduct {
 const homeMain = ({ navigation }: { navigation: any }) => {
   const [categoryDataApi, setCategoryDataApi] = useState<IdCategory>();
   const [productDataApi, setProductDataApi] = useState<dataProduct>();
-  const [dataGroup, setDataGroup] = useState();
   const getApiProduct = async () => {
     const result = await getProduct()
     setProductDataApi(result.data.data)
@@ -41,7 +40,6 @@ const homeMain = ({ navigation }: { navigation: any }) => {
     category: e,
     dataList: productDataApi?.filter((element: any) => element.IDManufacturer == e.IDManufacturer),
   }));
-  console.log("groupData", groupData)
   const [text, onChangeText] = React.useState("Useless Text");
   const onMoveToProduct = (data: any) => () => {
     navigation.navigate('productList', { productList: data });

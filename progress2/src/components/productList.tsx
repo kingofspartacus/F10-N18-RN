@@ -27,7 +27,7 @@ const productL = ({ route }: { route: any }) => {
         <TouchableOpacity onPress={() => navigation.goBack()} >
           <Ionicons name={'arrow-back-outline'} size={30} />
         </TouchableOpacity>
-        <Text style={styles.title}>{productList.title}</Text>
+        <Text style={styles.title}>{productList.category.NameManufacturer}</Text>
       </View>
       <View style={styles.header}>
         <TouchableOpacity style={styles.btnHeader}>
